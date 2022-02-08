@@ -45,7 +45,7 @@ function App() {
   };
   return (
     <div className="App">
-      <h2>Hello World</h2>
+      <h2>MRK3T</h2>
       <Nav 
       user={authUser}
       authenticated={authenticated}

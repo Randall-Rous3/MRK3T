@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { RegisterUser } from '../services/auth'
 
 const iState = {
-  userName: '',
+  name: '',
   email: '',
   password: '',
   confirmPassword: '',
@@ -59,10 +59,10 @@ export default function Register(props) {
             {/* <label htmlFor="Username">username</label> */}
             <input
               onChange={handleChange}
-              name="userName"
+              name="name"
               type="text"
-              placeholder="Username"
-              value={formValues.userName}
+              placeholder="name"
+              value={formValues.name}
               required
             />
           </div>
