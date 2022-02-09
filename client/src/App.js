@@ -10,6 +10,10 @@ import { Routes, Route } from 'react-router-dom';
 import Dashboard from './pages/dashboard';
 import LogInPage from './pages/login';
 import LogIn from './components/LogIn';
+import FoodDisplay from './pages/food';
+import BevDisplay from './pages/beverage';
+import WaresDisplay from './pages/wares';
+import VendorDetails from './pages/vendorDetails';
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false);
@@ -66,6 +70,10 @@ function App() {
           checkToken={checkToken}
           setUser={setUser}/>}
           />
+          <Route path = '/food' element={ <FoodDisplay />}/>
+          <Route path = '/bev' element={ <BevDisplay />}/>
+          <Route path = '/wares' element={ <WaresDisplay />}/>
+          <Route path = '/users/info/:id' element={<VendorDetails/>}/>
       </Routes>
         
     </div>

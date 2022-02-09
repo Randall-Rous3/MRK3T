@@ -6,3 +6,7 @@ nav{
   margin: 1em;
   color: rgb(27, 29, 28);
 }
+.thumbnail-img{
+  max-height:5em;
+  width: auto;
+}

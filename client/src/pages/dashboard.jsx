@@ -3,6 +3,7 @@ import { CheckSession } from '../services/auth';
 import axios from 'axios';
 import { BASE_URL } from "../globals/index";
 import UserForm from '../components/UserForm';
+import ProductForm from '../components/ProductForm';
 
 
 export default function Dashboard(props) {
@@ -28,6 +29,7 @@ export default function Dashboard(props) {
                 <UserForm
                 authUser={authUser}
                 />
+                <ProductForm />
 
                 
             </div>
