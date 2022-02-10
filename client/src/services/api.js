@@ -1,6 +1,6 @@
 import Axios from 'axios'
 
-export const BASE_URL = process.env.NODE_ENV === 'production' ? 'https://frozen-sierra-50597.herokuapp.com/' : 'http://localhost:3001'
+export const BASE_URL = process.env.NODE_ENV === 'production' ? 'https://mrk3t.herokuapp.com/' : 'http://localhost:3001'
 const Client = Axios.create({ baseURL: BASE_URL })
 // Intercepts every request axios makes
 Client.interceptors.request.use(
