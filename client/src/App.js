@@ -14,6 +14,8 @@ import FoodDisplay from './pages/food';
 import BevDisplay from './pages/beverage';
 import WaresDisplay from './pages/wares';
 import VendorDetails from './pages/vendorDetails';
+import ProductDetails from './pages/productDetails';
+import Footer from './components/Footer';
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false);
@@ -49,12 +51,16 @@ function App() {
   };
   return (
     <div className="App">
-      <h2>MRK3T</h2>
+      <h1>MRK3T</h1>
       <Nav 
       user={authUser}
       authenticated={authenticated}
       handleLogOut={handleLogOut}
       />
+        <span class="material-icons">
+          shopping_cart
+        </span>
+      <Footer />
       <Routes>
         <Route path='/' element={<LandingPage />} />
         <Route path='/register' element={<Register />}/>
@@ -74,6 +80,7 @@ function App() {
           <Route path = '/bev' element={ <BevDisplay />}/>
           <Route path = '/wares' element={ <WaresDisplay />}/>
           <Route path = '/users/info/:id' element={<VendorDetails/>}/>
+          <Route path = '/products/:id' element={<ProductDetails/>}/>
       </Routes>
         
     </div>

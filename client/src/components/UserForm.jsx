@@ -42,6 +42,7 @@ export default function UserForm ({props}) {
         setUpdatedUser({ ...updatedUser, [e.target.name]: e.target.value })
     }
     const handleSubmit = async (e) => {
+        e.preventDefault()
         updateUser()
 
     }
@@ -98,7 +99,7 @@ export default function UserForm ({props}) {
                 />
                 <input 
                     onChange={handleChange}
-                    type='boolean'
+                    type='text'
                     name='delivery_service'
                     placeholder='delivery options?'
                     value={updatedUser.deliver_services}

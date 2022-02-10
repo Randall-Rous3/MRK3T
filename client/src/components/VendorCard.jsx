@@ -4,11 +4,11 @@ const VendorCard = (props) => {
   
   return (
       
-    <div className="vendor-card" onClick={props.onClick}>
+    <div className="card" onClick={props.onClick}>
         <img className = 'thumbnail-img' src={props.image} alt="profile picture"/> 
-      <div className="info-wrapper flex-row space">
+      <div className="info-wrapper">
         <h3>{props.name}</h3>
-        <h3>{props.email}</h3>
+        <p>{props.email}</p>
       </div>
     </div>
     

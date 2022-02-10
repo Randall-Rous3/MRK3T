@@ -29,6 +29,7 @@ export default function ProductForm ({props}) {
                     userId: '',
                     price: '',
                     quantity: '',
+                    image:'',
                     description: '',
 
                 }))
@@ -40,6 +41,7 @@ export default function ProductForm ({props}) {
         setProduct({ ...product, [e.target.name]: e.target.value })
     }
     const handleSubmit = async (e) => {
+        e.preventDefault()
         createProduct()
 
     }
@@ -80,6 +82,13 @@ export default function ProductForm ({props}) {
                     name='quantity'
                     placeholder='quantity'
                     value={product.quantity}
+                />
+                <input
+                    onChange={handleChange}
+                    type='text'
+                    name='image'
+                    placeholder='image url'
+                    value={product.image}
                 />
                 <input 
                     onChange={handleChange}

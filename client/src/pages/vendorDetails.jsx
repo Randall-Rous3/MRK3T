@@ -18,7 +18,6 @@ const VendorDetails = (props) => {
         const response = await axios.get(`${BASE_URL}/${window.location.pathname}`);
         setUserDetails(response.data);
         setProductDetails(response.data.owner)
-        console.log(productDetails)
     };
 
 
@@ -48,15 +47,12 @@ const VendorDetails = (props) => {
         <ProductCard
           key={product.id}
           {...product}
-          name = {product.name}
-          image={product.image}
-          id = {product.id}
-          onClick= {()=> navigate(`/product/info/${product.id}`)
+          onClick= {()=> navigate(`/products/${product.id}`)
         }
         />
       ))} 
     </div>
-  );
+
   
 
 

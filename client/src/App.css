@@ -1,12 +1,83 @@
+@font-face {
+  font-family: 'Poiret One', cursive;
+  src: url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Poiret+One&display=swap')
+}
+body {
+  margin: 0.1em;
+  padding: 0;
+  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F8c%2F9d%2F9b%2F8c9d9bccf9abd19710f69401910801ff.jpg&f=1&nofb=1');
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: inherit;
+  text-align: center;
+
+}
+
+
 nav{
   background-color: bisque;
+  margin-bottom: 2em;
+  height: 2em;
+  font-family: 'Poiret One';
+}
+h1{
+  font-family: 'Poiret One';
+
 }
 .nav{
   text-decoration: none;
   margin: 1em;
+  font-size: large;
   color: rgb(27, 29, 28);
 }
+.nav:hover{
+  transform: scale(2.2);
+}
 .thumbnail-img{
-  max-height:5em;
-  width: auto;
+  max-height:10em;
+  max-width: 10em;
+  border-radius:.9em ;
+  margin: 1em;
+
+}
+.thumbnail-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: .2em;
+
+}
+.card{
+  display: flex;
+  justify-content: center;
+  margin: 1em;
+  background-color: rgba(12, 11, 10, 0.2);
+  border-radius: .9em;
+  margin: .5em;
+  cursor: pointer;
+  padding: .5em;
+}
+.card:hover{
+  transform: scale(1.05);
+
+}
+
+input{
+  margin: .5em;
+  border-radius: .2em;
+  background-color: rgba(12, 11, 10, 0.2);
+
+}
+form{
+  background-color: rgba(12, 11, 10, 0.2);
+
+}
+.footer{
+  position: absolute;
+  bottom: 0;
+  display: grid;
+  align-content: flex-start;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: rgba(200, 201, 195, 0.4);
+  grid-column-gap: .5em;
+  margin-top: 5em;
 }

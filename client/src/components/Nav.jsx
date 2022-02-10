@@ -12,7 +12,7 @@ return(
         <Link className="nav" onClick={props.handleLogOut} to="/">Logout</Link>
         <Link className="nav" to='/food'>Food</Link>
         <Link className="nav" to='/bev'>Bevreages</Link>
-        <Link className="nav" to='/bev'>Wares</Link>
+        <Link className="nav" to='/wares'>Wares</Link>
         <Link className="nav" to='/dashboard'>My account</Link>
 
 

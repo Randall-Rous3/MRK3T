@@ -16,7 +16,7 @@ export default function Dashboard(props) {
         setUserDetails(response.data);
     }
     
-    useEffect(() =>{
+    useEffect((e) =>{
         getUserDetails()
         CheckSession()
     }, [])
