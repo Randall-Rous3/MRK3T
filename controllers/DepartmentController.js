@@ -22,7 +22,7 @@ const GetAllDepartmentsWithAllInfo = async (req, res) => {
   try {
     const departmentsAndInfo = await Department.findAll({
       include: [
-        { model: User, as: 'owner' },
+        { model: User, as: 'vendor' },
       ]
     });
     res.send(departmentsAndInfo);
@@ -49,10 +49,10 @@ const GetDepartmentByIdWithAllInfo = async (req, res) => {
     const departmentAndInfo = await Department.findOne({
       where: { id: departmentId },
       include: [
-        { model: User, as: 'owner' },
+        { model: User, as: 'vendor' },
       ]
     });
-    res.send(userAndInfo);
+    res.send(departmentAndInfo);
   } catch (error) {
     throw error;
   }

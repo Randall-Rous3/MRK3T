@@ -3,8 +3,9 @@ import { Link, useNavigate } from 'react-router-dom'
 import { RegisterUser } from '../services/auth'
 
 const iState = {
-  userName: '',
+  name: '',
   email: '',
+  image: '',
   password: '',
   confirmPassword: '',
   departmentId: ''
@@ -13,15 +14,16 @@ const iState = {
 export default function Register(props) {
   const navigate = useNavigate()
   const [formValues, setFormValues] = useState({
-    userName: '',
+    name: '',
     email: '',
+    image: '',
     password: '',
     confirmPassword: '',
     departmentId:''
   })
   const password = formValues.password
   const passwordConfirm = formValues.confirmPassword
-  const username = formValues.userName
+  const name = formValues.name
 
   const handleChange = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value })
@@ -29,17 +31,16 @@ export default function Register(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    if (username === "") {
-      alert('Please enter a user name')
-    } else if (password.length < 7) {
+    if (password.length < 7) {
       alert("Your password must be at least 7 characters long")
       console.log(password.length)
     } else if (password !== passwordConfirm) {
       alert("Your passwords do not match")
-    } else if (username && password === passwordConfirm && password.length >= 7) {
+    } else if (name && password === passwordConfirm && password.length >= 7) {
       await RegisterUser({
-        userName: formValues.userName,
+        name: formValues.name,
         email: formValues.email,
+        image: formValues.image,
         password: formValues.password,
         departmentId: formValues.departmentId
       })
@@ -59,10 +60,20 @@ export default function Register(props) {
             {/* <label htmlFor="Username">username</label> */}
             <input
               onChange={handleChange}
-              name="userName"
+              name="name"
               type="text"
-              placeholder="Username"
-              value={formValues.userName}
+              placeholder="name"
+              value={formValues.name}
+              required
+            />
+            </div>
+            <div>
+            <input
+              onChange={handleChange}
+              name="image"
+              type="text"
+              placeholder="image url"
+              value={formValues.image}
               required
             />
           </div>
