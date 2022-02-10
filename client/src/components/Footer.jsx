@@ -8,7 +8,7 @@ const Footer = () =>{
         <div className="footer">
                 <div class= 'contact'>
     <h3> Thanks for coming to our site! see you again soon</h3>
-    <p> 56 old town road <br /> Middle Earth <br /> 00001 </p>
+    <p> Keep On <br /> Eating <br /> Local! </p>
     </div>
     <div class='CC'>
     <h3> Be apart of a community </h3>

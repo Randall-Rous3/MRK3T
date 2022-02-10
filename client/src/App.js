@@ -52,14 +52,15 @@ function App() {
   return (
     <div className="App">
       <h1>MRK3T</h1>
+      <span class="material-icons">
+          shopping_cart
+        </span>
       <Nav 
       user={authUser}
       authenticated={authenticated}
       handleLogOut={handleLogOut}
       />
-        <span class="material-icons">
-          shopping_cart
-        </span>
+
       <Footer />
       <Routes>
         <Route path='/' element={<LandingPage />} />

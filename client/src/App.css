@@ -3,6 +3,7 @@
   src: url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Poiret+One&display=swap')
 }
 body {
+  position: relative;
   margin: 0.1em;
   padding: 0;
   background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F8c%2F9d%2F9b%2F8c9d9bccf9abd19710f69401910801ff.jpg&f=1&nofb=1');
@@ -28,10 +29,17 @@ h1{
   text-decoration: none;
   margin: 1em;
   font-size: large;
-  color: rgb(27, 29, 28);
+  color: rgb(27, 29, 28, 0.8);
 }
 .nav:hover{
   transform: scale(2.2);
+}
+.material-icons{
+  font-size: 4em;
+  position: absolute;
+  top: 0.1em;
+  right: 0.1em;
+  cursor: pointer;
 }
 .thumbnail-img{
   max-height:10em;
@@ -58,6 +66,8 @@ h1{
 }
 .card:hover{
   transform: scale(1.05);
+  background-color: rgba(12, 11, 10, 0.4);
+
 
 }
 
@@ -72,12 +82,12 @@ form{
 
 }
 .footer{
-  position: absolute;
+  margin: .5em;
   bottom: 0;
+  position: absolute;
   display: grid;
   align-content: flex-start;
   grid-template-columns: 1fr 1fr 1fr;
   background-color: rgba(200, 201, 195, 0.4);
   grid-column-gap: .5em;
-  margin-top: 5em;
 }
