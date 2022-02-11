@@ -48,6 +48,7 @@ export default function ProductForm ({props}) {
 
     useEffect(() => {
         CheckSession()
+        // console.log(props.id)
     }, []);
 
 
@@ -66,7 +67,7 @@ export default function ProductForm ({props}) {
                     onChange={handleChange}
                     type='integer'
                     name='userId'
-                    placeholder='userId'
+                    placeholder= ''
                     value={product.userId}
                 />                
                 <input 

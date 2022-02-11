@@ -6,6 +6,7 @@ import UserForm from '../components/UserForm';
 import ProductForm from '../components/ProductForm';
 import { useNavigate } from 'react-router-dom';
 import Client from '../services/api';
+import VendorDetails from './vendorDetails';
 
 
 export default function Dashboard(props) {
@@ -38,12 +39,14 @@ export default function Dashboard(props) {
         return(
                     
             <div>
-                <h1>{userDetails.name}</h1>
                 <h1>  <br /> {userDetails.name}</h1>
+                <img src= {userDetails.image}/>
                 <UserForm
                 authUser={authUser}
                 />
                 <ProductForm />
+
+
 
                 
             </div>

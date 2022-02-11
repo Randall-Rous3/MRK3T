@@ -4,11 +4,10 @@
 }
 body {
   position: relative;
+  height: 100%;
   margin: 0.1em;
   padding: 0;
   background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F8c%2F9d%2F9b%2F8c9d9bccf9abd19710f69401910801ff.jpg&f=1&nofb=1');
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   align-items: center;
 }
@@ -37,6 +36,7 @@ h1,h2,h3{
   top: 0.09em;
   right: 0.09em;
   cursor: pointer;
+  text-decoration: none;
 }
 .thumbnail-img{
   max-height:10em;
@@ -71,6 +71,9 @@ h1,h2,h3{
 
 
 }
+::placeholder{
+  color: aqua;
+}
 
 input{
   margin: .5em;
@@ -83,13 +86,14 @@ form{
   display: flex;
   flex-direction: column;
   width: 30%;
+  margin-bottom: 1em;
 
 }
 .footer{
-  margin: .5em;
+  margin-top: .5em;
   width: 100%;
   position: fixed;
-  bottom: 0;
+  bottom: 0px;
   display: grid;
   /* align-content: flex-start; */
   grid-template-columns: 1fr 1fr 1fr;

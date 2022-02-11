@@ -47,14 +47,15 @@ export default function UserForm ({props}) {
 
     }
 
-    // useEffect(() => {
-    //     CheckSession()
-    // }, []);
+    useEffect(() => {
+        CheckSession()
+    }, []);
 
 
     return (
         <div className='dashboard'>
             <form className='user-form' onSubmit={handleSubmit}>
+                <h1>Update Info</h1>
                 <input
                     onChange={handleChange}
                     type='text'

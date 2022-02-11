@@ -17,7 +17,6 @@ export default function LogIn(props) {
     props.setAuthUser(payload)
     props.toggleAuthenticated(true)
     navigate(`/dashboard`)
-    alert('You\'ve successfully logged in!')
   }
 
 
