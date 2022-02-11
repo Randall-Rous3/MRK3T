@@ -25,7 +25,7 @@ export default function Dashboard(props) {
     useEffect((e) =>{
         GetUserDetails()
         CheckSession()
-    }, [])
+    }, [authUser, props.authenticated])
 
         return(
                     

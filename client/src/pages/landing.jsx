@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import DepartmentForm from '../components/DepartmentForm'
 
 export default function LandingPage() {
 
@@ -9,6 +10,7 @@ export default function LandingPage() {
         <div className='welcome'>
             <div className='welcome-description'>
                 <Link to = '/register'></Link>
+                <DepartmentForm/>
             </div>
             <div>
 

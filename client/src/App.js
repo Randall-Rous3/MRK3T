@@ -74,6 +74,7 @@ function App() {
             authenticated={authenticated}
           />}/>
           <Route path='/dashboard' element={<Dashboard
+          authenticated = {authenticated}
           authUser={authUser}
           checkToken={checkToken}
           setUser={setUser}/>}

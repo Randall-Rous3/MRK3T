@@ -9,19 +9,16 @@ body {
   background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F8c%2F9d%2F9b%2F8c9d9bccf9abd19710f69401910801ff.jpg&f=1&nofb=1');
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  position: inherit;
   text-align: center;
-
+  align-items: center;
 }
-
-
 nav{
   background-color: bisque;
   margin-bottom: 2em;
   height: 2em;
   font-family: 'Poiret One';
 }
-h1{
+h1,h2,h3{
   font-family: 'Poiret One';
 
 }
@@ -35,10 +32,10 @@ h1{
   transform: scale(2.2);
 }
 .material-icons{
-  font-size: 4em;
+  font-size: 2em;
   position: absolute;
-  top: 0.1em;
-  right: 0.1em;
+  top: 0.09em;
+  right: 0.09em;
   cursor: pointer;
 }
 .thumbnail-img{
@@ -90,11 +87,17 @@ form{
 }
 .footer{
   margin: .5em;
-  bottom: 0;
+  width: 100%;
   position: fixed;
+  bottom: 0;
   display: grid;
-  align-content: flex-start;
+  /* align-content: flex-start; */
   grid-template-columns: 1fr 1fr 1fr;
   background-color: rgba(200, 201, 195, 0.4);
   grid-column-gap: .5em;
+}
+button{
+  width: 5em;
+  align-self: center;
+
 }
