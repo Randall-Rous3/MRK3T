@@ -48,7 +48,7 @@ export default function DepartmentForm ({props}) {
     return (
         <div className='dashboard'>
             <form className='user-form' onSubmit={handleSubmit}>
-                <h1>Add products</h1>
+                <h1>Add Department</h1>
                 <input
                     onChange={handleChange}
                     type='text'
