@@ -13,10 +13,10 @@ export default function Dashboard(props) {
     let userDetailsArray = [];
     const [userDetails, setUserDetails] = useState(userDetailsArray);
     
-    const GetUserDetails = () => {
+    const GetUserDetails = async() => {
         if(authUser){
-        const response =  axios.get(`${BASE_URL}/users/${authUser.id}`);
-        setUserDetails(response.data);
+        const response =  await axios.get(`${BASE_URL}/users/${authUser.id}`)
+            setUserDetails(response.data);
         } else {
             navigate('/register')
         }
