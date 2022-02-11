@@ -54,6 +54,10 @@ h1{
   grid-gap: .2em;
 
 }
+.randall{
+  border-radius: 50%;
+  max-height: 5em;
+}
 .card{
   display: flex;
   justify-content: center;
@@ -75,16 +79,19 @@ input{
   margin: .5em;
   border-radius: .2em;
   background-color: rgba(12, 11, 10, 0.2);
-
 }
+
 form{
   background-color: rgba(12, 11, 10, 0.2);
+  display: flex;
+  flex-direction: column;
+  width: 30%;
 
 }
 .footer{
   margin: .5em;
   bottom: 0;
-  position: absolute;
+  position: fixed;
   display: grid;
   align-content: flex-start;
   grid-template-columns: 1fr 1fr 1fr;

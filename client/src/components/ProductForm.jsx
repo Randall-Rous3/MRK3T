@@ -54,7 +54,7 @@ export default function ProductForm ({props}) {
     return (
         <div className='dashboard'>
             <form className='user-form' onSubmit={handleSubmit}>
-                <h2>add products</h2>
+                <h1>Add products</h1>
                 <input
                     onChange={handleChange}
                     type='text'

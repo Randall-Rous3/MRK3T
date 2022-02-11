@@ -9,7 +9,13 @@ module.exports = (sequelize, DataTypes) => {
         as: 'owner',
         foreignKey: 'userId'
       });
+      Product.belongsTo(models.User, {
+        as: 'buyer',
+        through:  models.Cart,
+        foreignKey: 'userId'
+      });
     }
+
   }
   Product.init({
     userId: DataTypes.INTEGER,

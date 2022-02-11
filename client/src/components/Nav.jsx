@@ -14,6 +14,7 @@ return(
         <Link className="nav" to='/bev'>Bevreages</Link>
         <Link className="nav" to='/wares'>Wares</Link>
         <Link className="nav" to='/dashboard'>My account</Link>
+        <Link className="nav" to='/buggy'>Buggy</Link>
 
 
     </nav>

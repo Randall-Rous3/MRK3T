@@ -4,20 +4,26 @@ import axios from 'axios';
 import { BASE_URL } from "../globals/index";
 import UserForm from '../components/UserForm';
 import ProductForm from '../components/ProductForm';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Dashboard(props) {
+    const navigate = useNavigate()
     const authUser = props.authUser
     let userDetailsArray = [];
     const [userDetails, setUserDetails] = useState(userDetailsArray);
     
-    const getUserDetails = async () => {
+    const GetUserDetails = async () => {
+        if(authUser){
         const response = await axios.get(`${BASE_URL}/users/${authUser.id}`);
         setUserDetails(response.data);
+        } else {
+            navigate('/register')
+        }
     }
     
     useEffect((e) =>{
-        getUserDetails()
+        GetUserDetails()
         CheckSession()
     }, [])
 
@@ -25,7 +31,7 @@ export default function Dashboard(props) {
                     
             <div>
                 <h1>{userDetails.name}</h1>
-                <h1> your email: <br /> {userDetails.email}</h1>
+                <h1>  <br /> {userDetails.name}</h1>
                 <UserForm
                 authUser={authUser}
                 />

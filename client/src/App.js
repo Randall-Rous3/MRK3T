@@ -6,7 +6,7 @@ import { BASE_URL } from './globals/index';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import './App.css';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import Dashboard from './pages/dashboard';
 import LogInPage from './pages/login';
 import LogIn from './components/LogIn';
@@ -16,6 +16,7 @@ import WaresDisplay from './pages/wares';
 import VendorDetails from './pages/vendorDetails';
 import ProductDetails from './pages/productDetails';
 import Footer from './components/Footer';
+import Cart from './components/ShoppingCart';
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false);
@@ -52,9 +53,9 @@ function App() {
   return (
     <div className="App">
       <h1>MRK3T</h1>
-      <span class="material-icons">
-          shopping_cart
-        </span>
+      <Link className="material-icons" to='/buggy'>
+                shopping_cart
+      </Link>
       <Nav 
       user={authUser}
       authenticated={authenticated}
@@ -77,6 +78,7 @@ function App() {
           checkToken={checkToken}
           setUser={setUser}/>}
           />
+          <Route path = '/buggy' element={< Cart/>}/>
           <Route path = '/food' element={ <FoodDisplay />}/>
           <Route path = '/bev' element={ <BevDisplay />}/>
           <Route path = '/wares' element={ <WaresDisplay />}/>
