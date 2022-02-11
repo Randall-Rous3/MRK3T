@@ -5,6 +5,7 @@ import { BASE_URL } from "../globals/index";
 import UserForm from '../components/UserForm';
 import ProductForm from '../components/ProductForm';
 import { useNavigate } from 'react-router-dom';
+import Client from '../services/api';
 
 
 export default function Dashboard(props) {
@@ -22,9 +23,16 @@ export default function Dashboard(props) {
         }
     }
     
-    useEffect((e) =>{
-        GetUserDetails()
-        CheckSession()
+    useEffect( () => {
+        if (!props.authenticated || !authUser.id) {
+            console.log('not logged in')
+            return
+        }
+        Client.get(`api/users/${authUser.id}`)
+        .then(userDetails => {
+            console.log(authUser.id, userDetails)
+            setUserDetails(userDetails.data)
+        })
     }, [authUser, props.authenticated])
 
         return(
