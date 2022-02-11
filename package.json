@@ -8,7 +8,6 @@
     "start": "node server.js",
     "dev": "nodemon server.js",
     "build": "npm install && npx sequelize-cli db:migrate && cd client && rm -rf build && npm install && npm run build"
-
   },
   "repository": {
     "type": "git",
@@ -22,6 +21,7 @@
   },
   "homepage": "https://github.com/Randall-Rous3/MRKT#readme",
   "dependencies": {
+    "@googlemaps/react-wrapper": "^1.1.23",
     "bcrypt": "^5.0.1",
     "body-parser": "^1.19.1",
     "cors": "^2.8.5",
@@ -30,7 +30,7 @@
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.15",
-    "path": "^0.12.7",   
+    "path": "^0.12.7",
     "pg": "^8.7.3",
     "sequelize": "^6.15.1"
   }

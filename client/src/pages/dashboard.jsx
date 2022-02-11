@@ -25,13 +25,8 @@ export default function Dashboard(props) {
     }
     
     useEffect( () => {
-        if (!props.authenticated || !authUser.id) {
-            console.log('not logged in')
-            return
-        }
         Client.get(`api/users/${authUser.id}`)
         .then(userDetails => {
-            console.log(authUser.id, userDetails)
             setUserDetails(userDetails.data)
         })
     }, [authUser, props.authenticated])

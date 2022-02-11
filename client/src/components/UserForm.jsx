@@ -42,7 +42,6 @@ export default function UserForm ({props}) {
         setUpdatedUser({ ...updatedUser, [e.target.name]: e.target.value })
     }
     const handleSubmit = async (e) => {
-        e.preventDefault()
         updateUser()
 
     }
