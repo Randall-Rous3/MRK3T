@@ -96,7 +96,7 @@ form{
   border-radius: .9em;
 }
 footer{
-  position: fixed;
+  position: static;
   bottom: 0ex;
 }
 .footer{
