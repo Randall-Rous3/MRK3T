@@ -1,4 +1,5 @@
-const Footer = () =>{
+const Cart = () =>{
+    
 
 
 
@@ -15,4 +16,4 @@ const Footer = () =>{
     ) 
 }
 
-export default Footer
+export default Cart

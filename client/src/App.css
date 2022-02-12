@@ -95,7 +95,10 @@ form{
   margin-bottom: 1em;
   border-radius: .9em;
 }
-
+footer{
+  position: fixed;
+  bottom: 0ex;
+}
 .footer{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -103,10 +106,7 @@ form{
   grid-column-gap: .5em;
   width: 100vw;
   }
-footer{
-  position: static;
-  bottom: 0;
-}
+
 button{
   width: 5em;
   align-self: center;
