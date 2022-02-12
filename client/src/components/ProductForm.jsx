@@ -8,10 +8,11 @@ import { BASE_URL } from "../globals/index";
 export default function ProductForm ({props}) {
     const [product, setProduct] = useState({
         name: '',
-        userId: '',
+        // userId: props.userId,
         price: '',
         quantity: '',
         description: '',
+        imagge:''
 
 
     })
@@ -26,7 +27,6 @@ export default function ProductForm ({props}) {
             .then(() =>         
                 setProduct({
                     name: '',
-                    userId: '',
                     price: '',
                     quantity: '',
                     image:'',
@@ -62,14 +62,7 @@ export default function ProductForm ({props}) {
                     name='name'
                     placeholder=' name'
                     value={product.name}
-                />
-                <input 
-                    onChange={handleChange}
-                    type='integer'
-                    name='userId'
-                    placeholder= ''
-                    value={product.userId}
-                />                
+                />           
                 <input 
                     onChange={handleChange}
                     type='integer'

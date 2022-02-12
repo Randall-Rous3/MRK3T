@@ -7,6 +7,7 @@ import ProductForm from '../components/ProductForm';
 import { useNavigate } from 'react-router-dom';
 import Client from '../services/api';
 import VendorDetails from './vendorDetails';
+import DeleteAccount from '../components/DeleteAccount';
 
 
 export default function Dashboard(props) {
@@ -14,38 +15,52 @@ export default function Dashboard(props) {
     const authUser = props.authUser
     let userDetailsArray = [];
     const [userDetails, setUserDetails] = useState(userDetailsArray);
-    
-    const GetUserDetails = async() => {
-        if(authUser){
-        const response =  await axios.get(`${BASE_URL}/users/${authUser.id}`)
+
+    const GetUserDetails = async () => {
+        if (authUser) {
+            const response = await axios.get(`${BASE_URL}/users/${authUser.id}`)
             setUserDetails(response.data);
         } else {
             navigate('/register')
         }
     }
-    
-    useEffect( () => {
+
+    useEffect(() => {
         Client.get(`api/users/${authUser.id}`)
-        .then(userDetails => {
-            setUserDetails(userDetails.data)
-        })
+            .then(userDetails => {
+                setUserDetails(userDetails.data)
+            })
     }, [authUser, props.authenticated])
+    console.log(userDetails.id)
 
-        return(
-                    
-            <div>
-                <h1>  <br /> {userDetails.name}</h1>
-                <img src= {userDetails.image}/>
-                <UserForm
-                authUser={authUser}
-                />
-                <ProductForm />
+    return (
 
-
-
-                
+        <div>
+            <div className='info'>
+                <h1> {userDetails.name}</h1>
+                <img className='dash-img' src={userDetails.image} />
+                <p>{userDetails.address}</p>
+                <p>{userDetails.email}</p>
+                <p>{userDetails.contact_info}</p>
             </div>
-      
+            <div className='update-and-delete-form'>
+                <UserForm
+                    authUser={authUser}
+                />
+                <DeleteAccount
+                    userId={userDetails.id}
+                    name={userDetails.name}
+                />
+            </div>
+            <ProductForm
+                userId={userDetails.id}
+            />
+
+
+
+
+        </div>
+
     )
 
 }

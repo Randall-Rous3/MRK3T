@@ -2,19 +2,23 @@
   font-family: 'Poiret One', cursive;
   src: url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Poiret+One&display=swap')
 }
-html, body {
-  position: relative;
+body {
   height: 100%;
-  margin: 0em;
+  margin: 0;
   padding: 0;
-  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F8c%2F9d%2F9b%2F8c9d9bccf9abd19710f69401910801ff.jpg&f=1&nofb=1');
+  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F4.bp.blogspot.com%2F-VQPOIkaKao0%2FUU9OSNSIs0I%2FAAAAAAAAILo%2FZ1OIrj_LOFE%2Fs1600%2Fearth-tones-by-ibjennyjenny-rust.jpg&f=1&nofb=1');
+  background-repeat: no-repeat;
+  background-size: cover;
   text-align: center;
   align-items: center;
 
 }
+header{
+  height: 10em;
+}
 nav{
-  background-color: bisque;
-  margin-bottom: 2em;
+  background-color: rgb(219, 177, 126, 0.6);
+  margin-bottom: 1em;
   height: 2em;
   font-family: 'Poiret One';
 }
@@ -59,7 +63,7 @@ h1,h2,h3{
 .card{
   display: flex;
   justify-content: center;
-  margin: 1em;
+  margin: 1.2em;
   background-color: rgba(12, 11, 10, 0.2);
   border-radius: .9em;
   margin: .5em;
@@ -67,13 +71,14 @@ h1,h2,h3{
   padding: .5em;
 }
 .card:hover{
-  transform: scale(1.05);
+  transform: scale(1.02);
   background-color: rgba(12, 11, 10, 0.4);
 
 
 }
 ::placeholder{
-  color: aqua;
+  position:absolute;
+  color: rgb(185, 216, 189);
 }
 
 input{
@@ -86,23 +91,51 @@ form{
   background-color: rgba(12, 11, 10, 0.2);
   display: flex;
   flex-direction: column;
-  width: 30%;
-  margin-bottom: 1em;
-
-}
-.footer{
-  margin-top: 5em;
   width: 100%;
-  bottom: 0;
-  position:static;
+  margin-bottom: 1em;
+  border-radius: .9em;
+}
+
+.footer{
   display: grid;
-  /* align-content: flex-start; */
   grid-template-columns: 1fr 1fr 1fr;
-  background-color: rgba(200, 201, 195, 0.4);
+  background-color: rgba(3, 109, 38, 0.4);
   grid-column-gap: .5em;
+  width: 100vw;
+  }
+footer{
+  position: static;
+  bottom: 0;
 }
 button{
   width: 5em;
   align-self: center;
-
+  background-color: rgba(12, 11, 10, 0.2);
+}
+button:hover{
+  background-color: rgba(12, 11, 10, 0.4);
+}
+.delete-button{
+  width: 100%;
+  margin: .5em;
+  background-color: rgb(255, 0, 0,0.3);
+}
+.welcome{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-height: 30%;
+}
+.landing-img{
+  max-height: 25%;
+  width: auto;
+  margin: 1em;
+  border-radius: .9em;
+}
+.intro{
+  background-color: rgba(12, 11, 10, 0.2);
+  max-height: 30%;
+}
+.register{
+  display: flex;
+  justify-content: center;
 }

@@ -3,6 +3,7 @@ import axios from 'axios';
 import {Link, useNavigate} from 'react-router-dom'
 import VendorCard from '../components/VendorCard';
 import { BASE_URL } from "../globals/index";
+import Footer from '../components/Footer';
 
 
 const FoodDisplay = (props) => {
