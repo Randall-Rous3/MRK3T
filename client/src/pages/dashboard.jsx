@@ -31,6 +31,7 @@ export default function Dashboard(props) {
                 setUserDetails(userDetails.data)
             })
     }, [authUser, props.authenticated])
+    console.log(userDetails.id)
 
     return (
 
@@ -46,11 +47,14 @@ export default function Dashboard(props) {
                 <UserForm
                     authUser={authUser}
                 />
-                <DeleteAccount 
-                name = {userDetails.name}
+                <DeleteAccount
+                    userId={userDetails.id}
+                    name={userDetails.name}
                 />
             </div>
-            <ProductForm />
+            <ProductForm
+                userId={userDetails.id}
+            />
 
 
 
