@@ -31,7 +31,7 @@ const VendorDetails = (props) => {
         <div className="profile-layout-grid">
             <div className="name-and-pic">
                 <h1 className="name"> {userDetails.name} </h1>
-                <img className="thumbnail-img" src={userDetails.image} alt={userDetails.name} />
+                <img className="dash-img" src={userDetails.image} alt={userDetails.name} />
             </div>
             <div className="details">
                 address: 

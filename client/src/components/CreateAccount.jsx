@@ -83,7 +83,7 @@ export default function Register(props) {
               onChange={handleChange}
               name="email"
               type="email"
-              placeholder="Hpotter@hogwarts.edu"
+              placeholder="FarmyFarm@gmail.com"
               value={formValues.email}
               required
             />
@@ -117,7 +117,7 @@ export default function Register(props) {
               onChange={handleChange}
               type="departmentId"
               name="departmentId"
-              placeholder='departmentId'
+              placeholder='departmentId (2) for food, (3) for beverage (4) for wares'
               value={formValues.departmentId}
               required
             />

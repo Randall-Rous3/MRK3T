@@ -31,7 +31,7 @@ export default function Dashboard(props) {
                 setUserDetails(userDetails.data)
             })
     }, [authUser, props.authenticated])
-    console.log(userDetails.id)
+    console.log(userDetails)
 
     return (
 
@@ -43,6 +43,7 @@ export default function Dashboard(props) {
                 <p>{userDetails.email}</p>
                 <p>{userDetails.contact_info}</p>
             </div>
+            <div className='dash-form-grid'>
             <div className='update-and-delete-form'>
                 <UserForm
                     authUser={authUser}
@@ -55,6 +56,7 @@ export default function Dashboard(props) {
             <ProductForm
                 userId={userDetails.id}
             />
+            </div>
 
 
 

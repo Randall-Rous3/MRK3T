@@ -33,8 +33,10 @@ h1,h2,h3{
   color: rgb(27, 29, 28, 0.8);
 }
 .nav:hover{
-  transform: scale(2.2);
+  text-shadow: .01vw .01vw rgb(44, 133, 74) ;
+  transform: scale(1.1);
 }
+
 .material-icons{
   font-size: 2em;
   position: absolute;
@@ -138,4 +140,15 @@ button:hover{
 .register{
   display: flex;
   justify-content: center;
+}
+.dash-form-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-height: 30%;
+  grid-gap:1em;
+}
+.dash-img{
+  border: .2em solid rgb(121, 185, 121);
+  border-radius: .99em;
+
 }

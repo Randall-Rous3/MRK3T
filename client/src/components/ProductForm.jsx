@@ -8,11 +8,12 @@ import { BASE_URL } from "../globals/index";
 export default function ProductForm ({props}) {
     const [product, setProduct] = useState({
         name: '',
-        // userId: props.userId,
+        userId: 9,
         price: '',
         quantity: '',
         description: '',
-        imagge:''
+        image:'',
+
 
 
     })
@@ -53,8 +54,8 @@ export default function ProductForm ({props}) {
 
 
     return (
-        <div className='dashboard'>
-            <form className='user-form' onSubmit={handleSubmit}>
+        <div className=''>
+            <form className='product-form' onSubmit={handleSubmit}>
                 <h1>Add products</h1>
                 <input
                     onChange={handleChange}
