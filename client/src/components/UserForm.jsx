@@ -12,7 +12,6 @@ export default function UserForm ({props}) {
         image: '',
         contact_info: '',
         seasons: '',
-        hours: '',
         deliver_services: '',
 
     })
@@ -31,7 +30,6 @@ export default function UserForm ({props}) {
                     image: '',
                     contact_info: '',
                     seasons: '',
-                    hours: '',
                     deliver_services: '',
                 }))
 
@@ -89,13 +87,6 @@ export default function UserForm ({props}) {
                     name='seasons'
                     placeholder='seasons available'
                     value={updatedUser.seasons}
-                />
-                <input 
-                    onChange={handleChange}
-                    type='integer'
-                    name='hours'
-                    placeholder='hours of operation'
-                    value={updatedUser.hours}
                 />
                 <input 
                     onChange={handleChange}

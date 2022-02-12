@@ -17,6 +17,7 @@ import VendorDetails from './pages/vendorDetails';
 import ProductDetails from './pages/productDetails';
 import Footer from './components/Footer';
 import Cart from './components/ShoppingCart';
+import RegisterPage from './pages/register';
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false);
@@ -52,6 +53,7 @@ function App() {
   };
   return (
     <div className="App">
+      <header>
       <h1>MRK3T</h1>
       <Link className="material-icons" to='/buggy'>
                 shopping_cart
@@ -61,11 +63,11 @@ function App() {
       authenticated={authenticated}
       handleLogOut={handleLogOut}
       />
-
-      <Footer />
+      </header>
+      <main>
       <Routes>
         <Route path='/' element={<LandingPage />} />
-        <Route path='/register' element={<Register />}/>
+        <Route path='/register' element={<RegisterPage />}/>
         <Route path ='/login' element={
           <LogInPage 
             setAuthUser={setAuthUser}
@@ -86,7 +88,10 @@ function App() {
           <Route path = '/users/info/:id' element={<VendorDetails/>}/>
           <Route path = '/products/:id' element={<ProductDetails/>}/>
       </Routes>
-        
+      </main>
+      <footer>
+        <Footer/>
+      </footer>
     </div>
   );
 }
