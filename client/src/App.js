@@ -55,43 +55,46 @@ function App() {
   return (
     <div className="App">
       <header>
-      <h1>MRK3T</h1>
-      <Link className="material-icons" to='/buggy'>
-                shopping_cart
-      </Link>
-      <Nav 
-      user={authUser}
-      authenticated={authenticated}
-      handleLogOut={handleLogOut}
-      />
+        <div className='head-message'>
+          <h1>MRK3T</h1>
+          <p>For The Love of Food</p>
+        </div>
+        <Link className="material-icons" to='/buggy'>
+          shopping_cart
+        </Link>
+        <Nav
+          user={authUser}
+          authenticated={authenticated}
+          handleLogOut={handleLogOut}
+        />
       </header>
       <main>
-      <Routes>
-        <Route path='/' element={<LandingPage />} />
-        <Route path='/register' element={<RegisterPage />}/>
-        <Route path ='/login' element={
-          <LogInPage 
-            setAuthUser={setAuthUser}
-            authUser={authUser}
-            toggleAuthenticated={toggleAuthenticated}
-            authenticated={authenticated}
-          />}/>
+        <Routes>
+          <Route path='/' element={<LandingPage />} />
+          <Route path='/register' element={<RegisterPage />} />
+          <Route path='/login' element={
+            <LogInPage
+              setAuthUser={setAuthUser}
+              authUser={authUser}
+              toggleAuthenticated={toggleAuthenticated}
+              authenticated={authenticated}
+            />} />
           <Route path='/dashboard' element={<Dashboard
-          authenticated = {authenticated}
-          authUser={authUser}
-          checkToken={checkToken}
-          setUser={setUser}/>}
+            authenticated={authenticated}
+            authUser={authUser}
+            checkToken={checkToken}
+            setUser={setUser} />}
           />
-          <Route path = '/buggy' element={< Cart/>}/>
-          <Route path = '/food' element={ <FoodDisplay />}/>
-          <Route path = '/bev' element={ <BevDisplay />}/>
-          <Route path = '/wares' element={ <WaresDisplay />}/>
-          <Route path = '/users/info/:id' element={<VendorDetails/>}/>
-          <Route path = '/products/:id' element={<ProductDetails/>}/>
-      </Routes>
+          <Route path='/buggy' element={< Cart />} />
+          <Route path='/food' element={<FoodDisplay />} />
+          <Route path='/bev' element={<BevDisplay />} />
+          <Route path='/wares' element={<WaresDisplay />} />
+          <Route path='/users/info/:id' element={<VendorDetails />} />
+          <Route path='/products/:id' element={<ProductDetails />} />
+        </Routes>
       </main>
       <footer>
-        <Footer/>
+        <Footer />
       </footer>
     </div>
   );

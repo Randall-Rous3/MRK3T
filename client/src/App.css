@@ -16,16 +16,19 @@ body {
 header{
   height: 10em;
 }
+
 nav{
   background-color: rgb(219, 177, 126, 0.6);
   margin-bottom: 1em;
-  margin-top: 4em;
+  margin-top: 1em;
   height: 2em;
   font-family: 'Poiret One';
 }
-h1,h2,h3{
+h1,h2,h3,p{
   font-family: 'Poiret One';
-
+}
+h1{
+  font-size: 3em;
 }
 .nav{
   text-decoration: none;
