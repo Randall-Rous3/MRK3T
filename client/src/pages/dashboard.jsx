@@ -115,9 +115,9 @@ export default function Dashboard(props) {
                         />
                         delivery service?
                         <select
-                        value={updatedUser.deliver_services}
-                        onChange={handleChange}
-                        name={'delivery_services'}>
+                            value={updatedUser.deliver_services}
+                            onChange={handleChange}
+                            name={'delivery_services'}>
                             <option> true </option>
                             <option> false </option>
                         </select>

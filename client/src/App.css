@@ -141,6 +141,9 @@ button:hover{
   display: flex;
   justify-content: center;
 }
+.register-form{
+  width: 50%;
+}
 .dash-form-grid{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
