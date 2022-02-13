@@ -18,6 +18,7 @@ import ProductDetails from './pages/productDetails';
 import Footer from './components/Footer';
 import Cart from './components/ShoppingCart';
 import RegisterPage from './pages/register';
+import UserForm from './components/UserForm';
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false);

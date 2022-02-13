@@ -8,7 +8,7 @@ import { BASE_URL } from "../globals/index";
 export default function ProductForm ({props}) {
     const [product, setProduct] = useState({
         name: '',
-        userId: 9,
+        // userId: props.user.id,
         price: '',
         quantity: '',
         description: '',
@@ -47,10 +47,9 @@ export default function ProductForm ({props}) {
 
     }
 
-    useEffect(() => {
-        CheckSession()
-        // console.log(props.id)
-    }, []);
+    // useEffect(() => {
+    //     CheckSession()
+    // }, []);
 
 
     return (

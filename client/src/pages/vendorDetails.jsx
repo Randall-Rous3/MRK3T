@@ -38,9 +38,7 @@ const VendorDetails = (props) => {
                 <h2>{userDetails.address}</h2>
                 contact:
                 <h2> {userDetails.contact_info}</h2>
-                hours: 
-                <h2>{userDetails.hours}</h2>
-                products:
+                <h2>products:</h2>
                 {/* <h2>{productDetails.name}</h2> */}
                 <div className="thumbnail-grid">
         {productDetails.map((product) => (

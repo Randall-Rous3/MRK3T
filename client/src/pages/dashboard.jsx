@@ -15,23 +15,54 @@ export default function Dashboard(props) {
     const authUser = props.authUser
     let userDetailsArray = [];
     const [userDetails, setUserDetails] = useState(userDetailsArray);
+    const [updatedUser, setUpdatedUser] = useState({
+        name: '',
+        address: '',
+        image: '',
+        contact_info: '',
+        seasons: '',
+        deliver_services: '',
 
-    const GetUserDetails = async () => {
-        if (authUser) {
-            const response = await axios.get(`${BASE_URL}/users/${authUser.id}`)
-            setUserDetails(response.data);
-        } else {
-            navigate('/register')
-        }
+    })
+
+
+    const updateUser = () => {
+        const newUser = {
+            ...updatedUser
+        };
+        axios
+            .put(`${BASE_URL}/users/${userDetails.id}`, newUser)
+            .then(() =>
+                setUpdatedUser({
+                    name: '',
+                    address: '',
+                    image: '',
+                    contact_info: '',
+                    seasons: '',
+                    deliver_services: '',
+                }))
+
     }
+
+
+    const handleChange = (e) => {
+        setUpdatedUser({ ...updatedUser, [e.target.name]: e.target.value })
+    }
+    const handleSubmit = async (e) => {
+        updateUser()
+        e.preventDefault()
+
+    }
+
+
 
     useEffect(() => {
         Client.get(`api/users/${authUser.id}`)
             .then(userDetails => {
                 setUserDetails(userDetails.data)
             })
+        console.log(authUser)
     }, [authUser, props.authenticated])
-    console.log(userDetails)
 
     return (
 
@@ -44,18 +75,62 @@ export default function Dashboard(props) {
                 <p>{userDetails.contact_info}</p>
             </div>
             <div className='dash-form-grid'>
-            <div className='update-and-delete-form'>
-                <UserForm
-                    authUser={authUser}
+                <div className='update-and-delete-form'>
+                    <form className='user-form' onSubmit={handleSubmit}>
+                        <h1>Update Info</h1>
+                        <input
+                            onChange={handleChange}
+                            type='text'
+                            name='name'
+                            placeholder='business name'
+                            value={updatedUser.name}
+                        />
+                        <input
+                            onChange={handleChange}
+                            type='text'
+                            name='image'
+                            placeholder='image url'
+                            value={updatedUser.image}
+                        />
+                        <input
+                            onChange={handleChange}
+                            type='text'
+                            name='address'
+                            placeholder='address'
+                            value={updatedUser.address}
+                        />
+                        <input
+                            onChange={handleChange}
+                            type='textfield'
+                            name='contact_info'
+                            placeholder='contact information'
+                            value={updatedUser.contact_info}
+                        />
+                        <input
+                            onChange={handleChange}
+                            type='text'
+                            name='seasons'
+                            placeholder='seasons available'
+                            value={updatedUser.seasons}
+                        />
+                        delivery service?
+                        <select
+                        value={updatedUser.deliver_services}
+                        onChange={handleChange}
+                        name={'delivery_services'}>
+                            <option> true </option>
+                            <option> false </option>
+                        </select>
+                        <button type='submit'>update</button>
+                    </form>
+                    <DeleteAccount
+                        userId={userDetails.id}
+                        name={userDetails.id}
+                    />
+                </div>
+                <ProductForm
+                    user={userDetails}
                 />
-                <DeleteAccount
-                    userId={userDetails.id}
-                    name={userDetails.name}
-                />
-            </div>
-            <ProductForm
-                userId={userDetails.id}
-            />
             </div>
 
 

@@ -22,7 +22,7 @@ export default function UserForm ({props}) {
             ...updatedUser
         };
         axios
-            .put(`${BASE_URL}/users/${props.authUser.id}`, newUser)
+            .put(`${BASE_URL}/users/9`, newUser)
             .then(() =>         
                 setUpdatedUser({
                     name: '',
@@ -43,10 +43,6 @@ export default function UserForm ({props}) {
         updateUser()
 
     }
-
-    useEffect(() => {
-        CheckSession()
-    }, []);
 
 
     return (

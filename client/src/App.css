@@ -83,7 +83,7 @@ h1,h2,h3{
   color: rgb(185, 216, 189);
 }
 
-input{
+input,select{
   margin: .5em;
   border-radius: .2em;
   background-color: rgba(12, 11, 10, 0.2);
