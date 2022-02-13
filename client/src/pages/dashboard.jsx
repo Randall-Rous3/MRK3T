@@ -6,7 +6,6 @@ import UserForm from '../components/UserForm';
 import ProductForm from '../components/ProductForm';
 import { useNavigate } from 'react-router-dom';
 import Client from '../services/api';
-import VendorDetails from './vendorDetails';
 import DeleteAccount from '../components/DeleteAccount';
 
 
@@ -61,7 +60,6 @@ export default function Dashboard(props) {
             .then(userDetails => {
                 setUserDetails(userDetails.data)
             })
-        console.log(authUser)
     }, [authUser, props.authenticated])
 
     return (
@@ -125,7 +123,7 @@ export default function Dashboard(props) {
                     </form>
                     <DeleteAccount
                         userId={userDetails.id}
-                        name={userDetails.id}
+                        name={userDetails.name}
                     />
                 </div>
                 <ProductForm

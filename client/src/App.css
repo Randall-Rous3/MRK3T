@@ -19,6 +19,7 @@ header{
 nav{
   background-color: rgb(219, 177, 126, 0.6);
   margin-bottom: 1em;
+  margin-top: 4em;
   height: 2em;
   font-family: 'Poiret One';
 }
@@ -58,9 +59,13 @@ h1,h2,h3{
   grid-gap: .2em;
 
 }
-.randall{
+.randall, .ga-logo{
   border-radius: 50%;
   max-height: 5em;
+}
+.ga-logo{
+  border-radius: 50%;
+  max-height: 4em;
 }
 .card{
   display: flex;
@@ -146,7 +151,7 @@ button:hover{
 }
 .dash-form-grid{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   max-height: 30%;
   grid-gap:1em;
 }
