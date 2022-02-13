@@ -42,12 +42,18 @@ export default function Dashboard(props) {
                 }))
 
     }
+    const getUserDetails = async (user) => {
+        const response = await axios.get(`${BASE_URL}/users/${authUser.id}`);
+        setUserDetails(response.data);
+
+    };
 
 
     const handleChange = (e) => {
         setUpdatedUser({ ...updatedUser, [e.target.name]: e.target.value })
     }
     const handleSubmit = async (e) => {
+        getUserDetails()
         updateUser()
         e.preventDefault()
 
