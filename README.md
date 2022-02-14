@@ -4,10 +4,10 @@
   * Randall Rouse [in](https://www.linkedin.com/in/randall-rouse/) || [Trello](https://trello.com/b/NAT8AT5l/mrkt)
 
 ## MRK3T is a farmer's market to restaurant concept.
-## MRK3T gives producers of edibles and drinkables a place to showcase their goods and contact information to be viewed by buyers.
-## A place for conscientious restaurateurs to view their local options in leu of going with the big box option.
-## Things made by people for people.
-## Sourcing locally ensures your food is fresh, healthy and keeps money in the community. 
+ MRK3T gives producers of edibles and drinkables a place to showcase their goods and contact information to be viewed by buyers.
+ A place for conscientious restaurateurs to view their local options in leu of going with the big box option.
+ Things made by people for people.
+ Sourcing locally ensures your food is fresh, healthy and keeps money in the community. 
 
 ## Site plan
 ![Screen Shot 2022-02-07 at 7 56 59 AM](https://user-images.githubusercontent.com/93789562/152792388-0fa8944a-a54e-4f91-9676-8b9c3af40651.png)
