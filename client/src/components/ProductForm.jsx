@@ -5,14 +5,14 @@ import { BASE_URL } from "../globals/index";
 
 
 
-export default function ProductForm ({props}) {
+export default function ProductForm({ props }) {
     const [product, setProduct] = useState({
         name: '',
-        // userId: props.user.id,
+        userId: '',
         price: '',
         quantity: '',
         description: '',
-        image:'',
+        image: '',
 
 
 
@@ -25,17 +25,18 @@ export default function ProductForm ({props}) {
         };
         axios
             .post(`${BASE_URL}/products`, newProduct)
-            .then(() =>         
+            .then(() =>
                 setProduct({
                     name: '',
                     price: '',
                     quantity: '',
-                    image:'',
+                    image: '',
+                    userId: '',
                     description: '',
 
                 }))
 
-            }
+    }
 
 
     const handleChange = (e) => {
@@ -44,6 +45,7 @@ export default function ProductForm ({props}) {
     const handleSubmit = async (e) => {
         e.preventDefault()
         createProduct()
+        alert(`your product ${product.name} has been posted`)
 
     }
 
@@ -62,15 +64,21 @@ export default function ProductForm ({props}) {
                     name='name'
                     placeholder=' name'
                     value={product.name}
-                />           
-                <input 
+                />
+                <input
                     onChange={handleChange}
                     type='integer'
                     name='price'
                     placeholder='price'
                     value={product.price}
+                />                <input
+                    onChange={handleChange}
+                    type='integer'
+                    name='userId'
+                    placeholder='UserId'
+                    value={product.userId}
                 />
-                <input 
+                <input
                     onChange={handleChange}
                     type='integer'
                     name='quantity'
@@ -84,14 +92,14 @@ export default function ProductForm ({props}) {
                     placeholder='image url'
                     value={product.image}
                 />
-                <input 
+                <input
                     onChange={handleChange}
                     type='textfield'
                     name='description'
                     placeholder='description'
                     value={product.description}
                 />
-                <button type = 'submit'>submit</button>
+                <button type='submit'>submit</button>
             </form>
         </div>
     )

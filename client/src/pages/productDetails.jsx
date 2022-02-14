@@ -22,14 +22,14 @@ const ProductDetails = (props) => {
     useEffect(() => {
         getDetails();
     }, []);
-
+ 
     return (
         <div className="product-details-grid">
             <div className="product-details">
                 <h1 className="name"> {productDetails.name} </h1>
                 <img className="thumbnail-img" src={productDetails.image} alt={productDetails.name} />
                 <p className="name"> {productDetails.description} </p>
-                <p className="name"> ${productDetails.price}/lb </p>
+                <p className="name"> ${productDetails.price}/unit </p>
                 <p className="name"> amount available:{productDetails.quantity} </p>
                 <button>Buy</button>
             </div>
