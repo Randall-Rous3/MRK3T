@@ -3,7 +3,10 @@
 ### creator:
   * Randall Rouse [in](https://www.linkedin.com/in/randall-rouse/) || [Trello](https://trello.com/b/NAT8AT5l/mrkt)
 
-## MRKT is a place where local restaurants can source their food, drinks, and plate-ware from local substainable sources. For conscientious restaurant owners it is important to source their food locally.
+## MRK3T is a farmer's market to restaurant concept.
+## MRK3T gives producers of edibles and drinkables a place to showcase their goods and contact information to be viewed by buyers.
+## A place for conscientious restaurateurs to view their local options in leu of going with the big box option.
+## Things made by people for people.
 ## Sourcing locally ensures your food is fresh, healthy and keeps money in the community. 
 
 ## Site plan
@@ -11,6 +14,10 @@
 
 ![Screen Shot 2022-02-07 at 7 57 34 AM](https://user-images.githubusercontent.com/93789562/152792394-9b4c21b3-97e0-4ded-a6ba-0037e4464047.png)
 
+## Sie Preview
+<img src='screenshoots/Screen Shot 2022-02-14 at 8.19.30 AM.png'/>
+<img src='screenshoots/Screen Shot 2022-02-14 at 8.19.47 AM.png'/>
+<img src='screenshoots/Screen Shot 2022-02-14 at 8.20.21 AM.png'/>
 ## Timeframe
 * Project Pitches Due Monday 2/7 at 10:00AM EST
 * Projects Due Monday 2/14 at 11:30AM EST
