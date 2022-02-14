@@ -16,7 +16,6 @@ import WaresDisplay from './pages/wares';
 import VendorDetails from './pages/vendorDetails';
 import ProductDetails from './pages/productDetails';
 import Footer from './components/Footer';
-import Cart from './components/ShoppingCart';
 import RegisterPage from './pages/register';
 import UserForm from './components/UserForm';
 
@@ -59,9 +58,6 @@ function App() {
           <h1>MRK3T</h1>
           <p>For The Love of Food</p>
         </div>
-        <Link className="material-icons" to='/buggy'>
-          shopping_cart
-        </Link>
         <Nav
           user={authUser}
           authenticated={authenticated}
@@ -85,7 +81,6 @@ function App() {
             checkToken={checkToken}
             setUser={setUser} />}
           />
-          <Route path='/buggy' element={< Cart />} />
           <Route path='/food' element={<FoodDisplay />} />
           <Route path='/bev' element={<BevDisplay />} />
           <Route path='/wares' element={<WaresDisplay />} />

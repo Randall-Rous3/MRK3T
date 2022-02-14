@@ -42,6 +42,7 @@ export default function UserForm ({props}) {
     const handleSubmit = async (e) => {
         e.preventDefault()
         updateUser()
+        alert(`${updatedUser.name}'s info has been updated`)
 
     }
 

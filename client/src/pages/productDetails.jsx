@@ -28,8 +28,8 @@ const ProductDetails = (props) => {
             <div className="product-details">
                 <h1 className="name"> {productDetails.name} </h1>
                 <img className="thumbnail-img" src={productDetails.image} alt={productDetails.name} />
-                <p className="name"> {productDetails.description} </p>
-                <p className="name"> ${productDetails.price}/unit </p>
+                <h3 className="name"> {productDetails.description} </h3>
+                <h4 className="name"> ${productDetails.price}/unit </h4>
                 <p className="name"> amount available:{productDetails.quantity} </p>
                 <button>Buy</button>
             </div>

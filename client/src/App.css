@@ -164,3 +164,9 @@ button:hover{
   border-radius: .99em;
 
 }
+.product-details{
+  align-self: center;
+  width: 30%;
+  margin-left: 34%;
+
+}
