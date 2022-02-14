@@ -8,6 +8,7 @@ export default function LogInPage(props) {
     return (
         <div className='log-in'>
             <div >
+                <h1>Log In</h1>
                 <LogIn 
                     setAuthUser={props.setAuthUser}
                     authUser={props.authUser}

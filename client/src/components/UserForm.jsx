@@ -22,7 +22,7 @@ export default function UserForm ({props}) {
             ...updatedUser
         };
         axios
-            .put(`${BASE_URL}/users/9`, newUser)
+            .put(`${BASE_URL}/users/${props.authUser.id}`, newUser)
             .then(() =>         
                 setUpdatedUser({
                     name: '',

@@ -57,7 +57,7 @@ export default function Register(props) {
       <div className="card-overlay centered">
         <form className="col" onSubmit={handleSubmit}>
           <div className="input-wrapper">
-            {/* <label htmlFor="Username">username</label> */}
+              <h2>Create an Account</h2>
             <input
               onChange={handleChange}
               name="name"
@@ -78,7 +78,6 @@ export default function Register(props) {
             />
           </div>
           <div className="input-wrapper">
-            {/* <label htmlFor="email">Email</label> */}
             <input
               onChange={handleChange}
               name="email"
@@ -90,7 +89,6 @@ export default function Register(props) {
           </div>
 
           <div className="input-wrapper">
-            {/* <label htmlFor="password">Password</label> */}
             <input
               onChange={handleChange}
               type="password"
@@ -101,7 +99,6 @@ export default function Register(props) {
             />
           </div>
           <div className="input-wrapper">
-            {/* <label htmlFor="confirmPassword">Confirm Password</label> */}
             <input
               onChange={handleChange}
               type="password"
@@ -112,7 +109,6 @@ export default function Register(props) {
             />
           </div>
           <div className="input-wrapper">
-            {/* <label htmlFor="confirmPassword">Confirm Password</label> */}
             <input
               onChange={handleChange}
               type="departmentId"
