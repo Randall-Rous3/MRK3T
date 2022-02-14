@@ -134,12 +134,13 @@ button:hover{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   max-height: 30%;
+  margin-top: 2em;
 }
 .landing-img{
   max-height: 25%;
   width: auto;
-  margin: 1em;
   border-radius: .9em;
+  margin: 1em;
 }
 .intro{
   background-color: rgba(12, 11, 10, 0.2);
